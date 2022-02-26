@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom'
 import { Home, Projects, Contact } from './routes'
 import { useState, useMemo } from 'react'
 import axios from 'axios'
+import { Announcement } from './components';
 
 const App = () => {
 
@@ -53,6 +54,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <Announcement />
       <Navigation />
       <br />
       <input type="checkbox" id="switch" name="switch" role="switch" onChange={() => 
