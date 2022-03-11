@@ -57,11 +57,13 @@ const App = () => {
       <Announcement />
       <Navigation />
       <br />
-      <input type="checkbox" id="switch" name="switch" role="switch" onChange={() => 
-        document.querySelector("html").getAttribute("data-theme") === 'light' ?
-        (document.querySelector("html").setAttribute("data-theme", "dark"), setThemeIcon('🌙')) :
-        (document.querySelector("html").setAttribute("data-theme", "light"), setThemeIcon('☀️'))
-      } />&nbsp;{themeIcon}
+      <div className="theme">
+        <input type="checkbox" id="switch" name="switch" role="switch"  onChange={() => 
+          document.querySelector("html").getAttribute("data-theme") === 'light' ?
+          (document.querySelector("html").setAttribute("data-theme", "dark"), setThemeIcon('🌙')) :
+          (document.querySelector("html").setAttribute("data-theme", "light"), setThemeIcon('☀️'))
+        } />&nbsp;{themeIcon}
+        </div>
       <Routes>
         <Route exact path='/' element={<Home />}></Route>
         <Route exact path='/projects' element={<Projects repos={repos} />}></Route>

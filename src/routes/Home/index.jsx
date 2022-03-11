@@ -13,7 +13,7 @@ const Home = () => {
           I enjoy creating REST APIs and just random, cool, fun, little projects. 
           You can check my open source projects on <a href='https://github.com/justinbalaguer' target='_blank' rel='noreferrer noopener'>GitHub</a>.</p>
         <h3>Interests</h3>
-        <p>GraphQL, Web3, TypeScript, Automation</p>
+        <p>GraphQL, Web3, TypeScript, Automation, Vim</p>
       </div>
     </div>
   )
