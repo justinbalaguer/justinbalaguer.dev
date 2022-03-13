@@ -10,6 +10,7 @@ const App = () => {
 
   const [repos, setRepos] = useState(null)
   const [themeIcon, setThemeIcon] = useState('☀️')
+  const [themeDark, setThemeDark] = useState(true)
 
   const getData = () => {
     const options = {
@@ -38,7 +39,7 @@ const App = () => {
         }`
       }
     }
-
+ 
   axios
     .request(options)
     .then(function(response) {
@@ -50,6 +51,12 @@ const App = () => {
     })
   }
 
+  const toggle = () => {
+    document.querySelector("html").getAttribute("data-theme") === 'light' ?
+    (document.querySelector("html").setAttribute("data-theme", "dark"), setThemeIcon("🌙"), setThemeDark(true)) :
+    (document.querySelector("html").setAttribute("data-theme", "light"), setThemeIcon("☀️"), setThemeDark(false))
+  }
+
   useMemo(() => getData(), [])
 
   return (
@@ -58,12 +65,8 @@ const App = () => {
       <Navigation />
       <br />
       <div className="theme">
-        <input type="checkbox" id="switch" name="switch" role="switch"  onChange={() => 
-          document.querySelector("html").getAttribute("data-theme") === 'light' ?
-          (document.querySelector("html").setAttribute("data-theme", "dark"), setThemeIcon('🌙')) :
-          (document.querySelector("html").setAttribute("data-theme", "light"), setThemeIcon('☀️'))
-        } />&nbsp;{themeIcon}
-        </div>
+        <input type="checkbox" id="switch" name="switch" role="switch"  onChange={toggle} checked={themeDark ? true : false} />&nbsp;{themeIcon}
+      </div>
       <Routes>
         <Route exact path='/' element={<Contact />}></Route>
         <Route exact path='/projects' element={<Projects repos={repos} />}></Route>
