@@ -65,9 +65,9 @@ const App = () => {
         } />&nbsp;{themeIcon}
         </div>
       <Routes>
-        <Route exact path='/' element={<Home />}></Route>
+        <Route exact path='/' element={<Contact />}></Route>
         <Route exact path='/projects' element={<Projects repos={repos} />}></Route>
-        <Route exact path='/contact' element={<Contact />}></Route>
+        <Route path='*' element={<p>Not found</p>}></Route>
       </Routes>
     </div>
   );
