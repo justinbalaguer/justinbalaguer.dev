@@ -9,12 +9,10 @@ const Projects = (obj) => {
         <h3><FontAwesomeIcon icon={faThumbtack} />&nbsp;Pinned projects on my Github:</h3>
           {
             obj?.repos?.data?.user?.pinnedItems?.edges?.map((el,i) => (
-              <ul key={i}>
-                <li>
-                  <a href={el.node.url} target='_blank' rel='noreferrer noopener'>{el.node.name}</a>
-                  <p>{el.node.description}</p>
-                </li>
-              </ul>
+              <div key={i}>
+                <a href={el.node.url} target='_blank' rel='noreferrer noopener'>{el.node.name}</a>
+                <p>{el.node.description}</p>
+              </div>
             ))
           }
       </div>
