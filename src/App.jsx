@@ -61,7 +61,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <Announcement />
+      {/* <Announcement /> */}
       <Navigation />
       <br />
       <div className="theme">
