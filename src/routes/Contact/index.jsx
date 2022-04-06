@@ -28,7 +28,7 @@ const Contact = () => {
         </div>
         <br />
         <div>
-          <h3>Cryptocurrency</h3>
+          <h3>Cryptocurrency:</h3>
           <p>
             <code>ETH: 0xb9dB50b933aE312ea4A55707e0a146c0c60bFb19</code>
           </p>
