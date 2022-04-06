@@ -29,7 +29,12 @@ const Contact = () => {
         <br />
         <div>
           <h3>Cryptocurrency</h3>
-          <code>ETH: 0xb9dB50b933aE312ea4A55707e0a146c0c60bFb19</code>
+          <p>
+            <code>ETH: 0xb9dB50b933aE312ea4A55707e0a146c0c60bFb19</code>
+          </p>
+          <p>
+            <code>BSC: 0x8548e0c0A044168Fe7dB72ea4AC6f3dD05C548dc</code>
+          </p>
         </div>
       </div>
     </div>
