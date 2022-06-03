@@ -2,14 +2,14 @@
 <html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/justinbalaguer.svg" />
+    <link rel="icon" type="image/svg+xml" href="/src/justinbalaguer-dark.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
       content="Justin Balaguer"
     />
-    <link rel="apple-touch-icon" type="image/svg+xml" href="/src/justinbalaguer.svg" />
+    <link rel="apple-touch-icon" type="image/svg+xml" href="/src/justinbalaguer-dark.svg" />
     <!-- Facebook Meta -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://justinbalaguer.dev/">
@@ -22,7 +22,7 @@
     <meta property="twitter:title" content="Justin Balaguer">
     <meta property="twitter:description" content="Web Developer">
     <meta property="twitter:image" content="./src/jstn.jpg">
-    <title>Justin Balaguer</title>
+    <title>Justin (He/Him)</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137980061-1"></script>
     <script>
@@ -35,36 +35,6 @@
   </head>
   <body>
     <div id="root"></div>
-    <!-- Messenger Chat Plugin Code -->
-    <div id="fb-root"></div>
-
-    <!-- Your Chat Plugin code -->
-    <div id="fb-customer-chat" class="fb-customerchat">
-    </div>
-
-    <script>
-      var chatbox = document.getElementById('fb-customer-chat');
-      chatbox.setAttribute("page_id", "153486573490841");
-      chatbox.setAttribute("attribution", "biz_inbox");
-    </script>
-
-    <!-- Your SDK code -->
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          xfbml            : true,
-          version          : 'v13.0'
-        });
-      };
-
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
